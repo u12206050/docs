@@ -97,6 +97,15 @@ npx directus schema snapshot --yes ./snapshot.yaml
 
 Note, that this will force overwrite existing snapshot files.
 
+If you wish to generate a separate schema file per collection, run
+
+```bash
+npx directus schema snapshot --split
+```
+
+Note, `schema apply` will check for a flag within the main schema file to see if it is split up into mutliple files or not.
+DO NOT REMOVE THAT FLAG.
+
 ::: tip Date-based snapshots
 
 To keep multiple snapshot organized by date, create a folder `snapshots` in your project root directory add the
